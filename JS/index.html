@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <label for="fullName"> Full Name:</label>
+    <input type="text" id="fullName" onkeyup="logToConsole(event)" />
+    <script>
+
+        const fullName = {
+            get(){
+                document.getElementById('fullName').value;
+            },
+            set(newValue){
+                document.getElementById('fullName').value = newValue;
+            }
+        }
+
+        function logToConsole(event){
+            console.log(event.target.value)
+        }
+        
+    </script>
+</body>
+</html>
